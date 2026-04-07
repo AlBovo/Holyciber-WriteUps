@@ -1,6 +1,6 @@
 from pwn import *
 
-r = remote("10.45.1.2", 11146)
+r = remote("ecb-mac.challs.olicyber.it", 38082)
 
 target_msg = "Questo è un messaggio a caso lungo esattamente 16 blocchi. 16 blocchi sono 16x16 = 256 bytes cioè 2048 bits. Non è facile arrivare ad una lunghezza del genere, dopo un po' finiscono le idee su cosa scrivere. Comunque dovremmo aver quasi finito, ciao!!!!"
 target_msg = target_msg.encode()

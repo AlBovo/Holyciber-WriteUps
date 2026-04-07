@@ -1,14 +1,16 @@
-# from pwn import *
+import os
+if not os.path.isfile("palle.txt"):
+    from pwn import *
 
-# r = remote("10.45.1.2", 10927)
+    r = remote("another-one.challs.olicyber.it", 38081)
 
-# s = b''
-# for i in range(100):
-#     r.recvuntil(b'! ')
-#     s += r.recvline()
-#     r.sendlineafter(b'> ', b'si')
+    s = b''
+    for i in range(100):
+        r.recvuntil(b'! ')
+        s += r.recvline()
+        r.sendlineafter(b'> ', b'si')
 
-# open("palle.txt", "wb").write(s)
+    open("palle.txt", "wb").write(s)
 
 def xor(a,b):
     return bytes(x ^ y for x, y in zip(a, b))

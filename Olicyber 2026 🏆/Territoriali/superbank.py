@@ -14,7 +14,7 @@ def conn():
             c
         ''')
     else:
-        r = remote("10.45.1.2", 54323)
+        r = remote("super-secure-bank.challs.olicyber.it", 38080)
 
     return r
 

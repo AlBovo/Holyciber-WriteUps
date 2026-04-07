@@ -5,4 +5,4 @@ proj = angr.Project("./mappa",
 init = proj.factory.entry_state()
 sim = proj.factory.simulation_manager(init)
 s = sim.explore(find=0x12F2, avoid=0x1303)
-print(s.found[0].posix.dumps(0).decode(), end="")
+print(s.found[0].posix.dumps(0).decode())
